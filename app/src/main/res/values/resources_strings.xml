@@ -1,0 +1,6 @@
+<resources>
+    <string-array name="movies_type">
+        <item>Popular</item>
+        <item>Top Rated</item>
+    </string-array>
+</resources>

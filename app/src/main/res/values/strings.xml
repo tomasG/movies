@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Movies App</string>
+    <string name="generic_error">Something went wrong, please try again later</string>
+    <string name="image_movie_content_description">Image Movie</string>
+
+    <string name="transition_image">ImageMovie</string>
+    <string name="transition_title">TitleMovie</string>
+
+</resources>
