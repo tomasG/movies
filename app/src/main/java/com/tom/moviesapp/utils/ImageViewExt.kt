@@ -37,6 +37,7 @@ fun ImageView.loadImage(url: String, dimens: Pair<Int, Int>, quality: String = "
 
                             override fun onError(e: Exception?) {
                                 Log.v("PICASSO", e?.localizedMessage ?: "")
+                                scheduleStartPostponedTransition(imageView)
                             }
                         })
                 }

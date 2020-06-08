@@ -8,8 +8,6 @@ import com.tom.moviesapp.core.MovieSchedulers
 import com.tom.moviesapp.models.Error
 import com.tom.moviesapp.models.MovieDetail
 import com.tom.moviesapp.repositories.MoviesRepository
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 import java.lang.ref.WeakReference
 
 class MovieDetailViewModel(

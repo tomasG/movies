@@ -1,7 +1,9 @@
 package com.tom.moviesapp.screens.detail
 
+import android.app.Activity
 import android.os.Bundle
 import android.util.Log
+import androidx.core.app.ActivityCompat
 import androidx.lifecycle.Observer
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
@@ -21,7 +23,7 @@ class DetailActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
-        postponeEnterTransition();
+        postponeEnterTransition()
         youtubePlayer = youtubePlayerFragment as YouTubePlayerSupportFragmentX
         setUi()
         intent?.extras?.getInt(Constants.MOVIE_ID).also {
@@ -40,6 +42,7 @@ class DetailActivity : BaseActivity() {
             }
         })
         movieViewModel.getError().observe(this, Observer {
+            ActivityCompat.startPostponedEnterTransition(this)
             showSnackBarError(mainContainerDetailLayout, it)
         })
 
